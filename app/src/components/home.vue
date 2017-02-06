@@ -1,16 +1,17 @@
 <template lang="pug">
-.home
-  h1.l-ta--c Material Desgin
+  <div>
+    <h1>this is my home!</h1>
+  </div>
 
 </template>
 
 <script>
  export default {
- 	data (){
- 		return {
+   data () {
+     return {
 
- 		}
- 	}
+     }
+   }
  }
 </script>
 

@@ -3,11 +3,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 // import router from './router'
-import routes from './routes'
+// import routes from './routes'
 import App from './App'
 // 导入模板
-import Hello from './components/Hello.vue'
 import Article from './components/Article.vue'
+import Home from './components/home.vue'
 
 // 告诉vue要使用router
 Vue.use(VueRouter)
@@ -19,18 +19,18 @@ const router = new VueRouter({
   routes // 挂载路由集合
 })
 
-//编写路由集合
+// 编写路由集合
 const routes = [
-	{
-		name: 'home', // 路由名(选填)
-		path: '/', // 根路由
-		component: Home // 模板
-	},
-	{
-		name: 'Article',
-		path: '/Article',
-		component: Article
-	}
+  {
+    name: 'home', // 路由名(选填)
+    path: '/', // 根路由
+    component: Home // 模板
+  },
+  {
+    name: 'Article',
+    path: '/Article',
+    component: Article
+  }
 ]
 
 // 导出router对象
