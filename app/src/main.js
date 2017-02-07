@@ -9,7 +9,7 @@ import status from './store/modules/status.js'
 import demo from './store/modules/demo.js'
 
 import VueRouter from 'vue-router'
-// import router from './router'
+
 import routes from './routes'
 import App from './App'
 
