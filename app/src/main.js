@@ -1,16 +1,25 @@
 // 程序的入口
 
 import Vue from 'vue'
+// 导入vuex
+import Vuex from 'vuex'
+// 导入status(管理全局应用模块状态)
+import status from './store/modules/status.js'
+// 导入demo模块
+import demo from './store/modules/demo.js'
+
 import VueRouter from 'vue-router'
 // import router from './router'
-// import routes from './routes'
+import routes from './routes'
 import App from './App'
-// 导入模板
-import Article from './components/Article.vue'
-import Home from './components/home.vue'
 
 // 告诉vue要使用router
 Vue.use(VueRouter)
+Vue.use(Vuex)
+
+// env里去获取当前的环境是否需要开启严格模式
+// 在发布环境开启严格模式会造成性能上不必要的损失
+const debug = process.env.NODE_ENV !== 'production'
 
 // 实例化router对象
 const router = new VueRouter({
@@ -19,22 +28,16 @@ const router = new VueRouter({
   routes // 挂载路由集合
 })
 
-// 编写路由集合
-const routes = [
-  {
-    name: 'home', // 路由名(选填)
-    path: '/', // 根路由
-    component: Home // 模板
+// 默认导出vuex模块
+export default new Vuex.Store({
+  // 导入模块
+  modules: {
+    status,
+    demo
   },
-  {
-    name: 'Article',
-    path: '/Article',
-    component: Article
-  }
-]
-
-// 导出router对象
-export default router
+  // 是否开启严格模式
+  strict: debug
+})
 
 new Vue({
   // el: '#app',

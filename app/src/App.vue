@@ -1,7 +1,9 @@
 <template>
   <div id="app">
+    <!-- 字符串 -->
     <router-link to="/">go home</router-link>
-    <router-view></router-view>
+    <!-- 对象 -->
+    <router-link :to="{ name: 'Article' }">go obj</router-link>
   </div>
 </template>
 
