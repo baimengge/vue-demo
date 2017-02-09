@@ -1,9 +1,16 @@
 <template>
   <div id="app">
-    <!-- 字符串 -->
-    <router-link to="/">go home</router-link>
-    <!-- 对象 -->
-    <router-link :to="{ name: 'Article' }">go obj</router-link>
+    <el-row>
+      <el-col :span="24">
+        <div class="grid-content bg-purple-dark">
+          <icon name="more" scale="3" style="color: #fff;"></icon>
+          <h1>XiXiBai</h1>
+        </div>
+      </el-col>
+    </el-row>
+    <!-- 路由出口 -->
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <router-view></router-view>
   </div>
 </template>
 
@@ -14,12 +21,25 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#app{
+  font-family: '微软雅黑';
 }
+.grid-content {
+  border-radius: 4px;
+  min-height: 200px;
+}
+.bg-purple-dark {
+  background: #1ABC9C;
+}
+.bg-purple-dark h1{
+  text-align: center;
+  color:#fff;
+  margin: 0;
+  opacity:0.5;
+  font-size: 28px;
+}
+#app svg{
+  font-size:16px;
+}
+
 </style>

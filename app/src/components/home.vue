@@ -1,7 +1,6 @@
 <template lang="pug">
-  <div>
-    <h1>this is my home!</h1>
-  </div>
+  .home
+  	h1.l-ta--c Vue
 
 </template>
 

@@ -9,13 +9,19 @@ import status from './store/modules/status.js'
 import demo from './store/modules/demo.js'
 
 import VueRouter from 'vue-router'
-
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-default/index.css'
 import routes from './routes'
 import App from './App'
+
+import Icon from 'vue-svg-icon/Icon.vue'
+Vue.component('icon', Icon)
+Icon.inject('more')
 
 // 告诉vue要使用router
 Vue.use(VueRouter)
 Vue.use(Vuex)
+Vue.use(ElementUI)
 
 // env里去获取当前的环境是否需要开启严格模式
 // 在发布环境开启严格模式会造成性能上不必要的损失
