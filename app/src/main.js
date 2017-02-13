@@ -17,6 +17,9 @@ import App from './App'
 import Icon from 'vue-svg-icon/Icon.vue'
 Vue.component('icon', Icon)
 Icon.inject('more')
+Icon.inject('home')
+Icon.inject('article')
+Icon.inject('demo')
 
 // 告诉vue要使用router
 Vue.use(VueRouter)

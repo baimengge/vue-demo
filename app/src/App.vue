@@ -5,6 +5,32 @@
         <div class="grid-content bg-purple-dark">
           <icon name="more" scale="3" style="color: #fff;"></icon>
           <h1>XiXiBai</h1>
+          <ul class="menu">
+            <router-link to="/">
+              <div>
+                <span>
+                  <icon name="home" scale="5"></icon>
+                </span>
+                <p>home</p>
+              </div>
+            </router-link>
+            <router-link to="/Article">
+              <div>
+                <span>
+                  <icon name="article" scale="5"></icon>
+                </span>
+                <p>article</p>
+              </div>
+            </router-link>
+            <router-link to="/demo">
+              <div>
+                <span>
+                  <icon name="demo" scale="5"></icon>
+                </span>
+                <p>demo</p>
+              </div>
+            </router-link>
+          </ul>
         </div>
       </el-col>
     </el-row>
@@ -26,7 +52,6 @@ export default {
 }
 .grid-content {
   border-radius: 4px;
-  min-height: 200px;
 }
 .bg-purple-dark {
   background: #1ABC9C;
@@ -41,5 +66,21 @@ export default {
 #app svg{
   font-size:16px;
 }
-
+#app .menu{
+  background-color: #fff;
+  text-align: center;
+  margin: 10px 200px;
+  padding: 10px 10px;
+  margin-bottom: 1px;
+  box-shadow: 0 3px 5px #000;
+  height: 73px;
+}
+#app .menu a{
+  text-decoration: none;
+  float:left;
+  width: 33%;
+}
+#app .menu a p{
+  margin: 0;
+}
 </style>
